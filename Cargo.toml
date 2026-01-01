@@ -10,8 +10,12 @@ panic = "abort"
 strip = true
 
 [dependencies]
-alpm = "5.0.0"
+alpm = { version = "5.0.0", default-features = false, features = [
+  "pkg-config",
+] }
 libc = "0.2.178"
-rand = "0.9.2"
-tokio = { version = "1.37", features = ["full"] }
+rand = { version = "0.9.2", default-features = false, features = [
+  "thread_rng",
+] }
+tokio = { version = "1.37", default-features = false, features = ["macros"] }
 zbus = { version = "5.12", default-features = false, features = ["tokio"] }
