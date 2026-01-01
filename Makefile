@@ -1,4 +1,4 @@
-BINARY := greeter
+BINARY := arch-greeter
 PREFIX ?= $(HOME)/.cargo
 BINDIR := $(PREFIX)/bin
 TARGET := target/release/$(BINARY)

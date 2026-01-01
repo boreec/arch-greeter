@@ -1,11 +1,11 @@
-# greeter
+# arch-greeter
 
-Greets the user with a collection of system health indicators and security
-metrics.
+**arch-greeter** is a lightweight Linux program for Arch Linux that greets the
+user by displaying a set of system health indicators and security metrics.
 
 # Makefile usage
 
-Install the binary to `~/.cargo/bin/greeter`:
+Install the binary to `~/.cargo/bin/arch-greeter`:
 
 ```console
 make install
