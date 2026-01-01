@@ -1,7 +1,7 @@
 BINARY := greeter
 PREFIX ?= $(HOME)/.cargo
 BINDIR := $(PREFIX)/bin
-TARGET := target/x86_64-unknown-linux-gnu/release/$(BINARY)
+TARGET := target/release/$(BINARY)
 
 .PHONY: install build compress clean
 
