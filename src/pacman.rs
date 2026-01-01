@@ -2,7 +2,7 @@ use alpm::Alpm;
 use std::error::Error;
 use std::time::{Duration, SystemTime, UNIX_EPOCH};
 
-pub fn time_since_last_pacman_update() -> Result<Duration, Box<dyn Error>> {
+pub fn time_since_last_pacman_update() -> Result<Duration, Box<dyn Error + Send + Sync>> {
     let handle = Alpm::new("/", "/var/lib/pacman/")?;
     let local_db = handle.localdb();
 

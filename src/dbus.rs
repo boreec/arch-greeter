@@ -47,7 +47,7 @@ impl fmt::Display for BootTimeRecord {
     }
 }
 
-pub fn retrieve_boot_time() -> std::result::Result<BootTimeRecord, Box<dyn Error>> {
+pub fn retrieve_boot_time() -> std::result::Result<BootTimeRecord, Box<dyn Error + Send + Sync>> {
     let conn = Connection::new_system()?;
     let p = conn.with_proxy(
         "org.freedesktop.systemd1",
